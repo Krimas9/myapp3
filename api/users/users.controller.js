@@ -1,7 +1,7 @@
-// const NotFoundError = require("../../errors/not-found");
-// const UnauthorizedError = require("../../errors/unauthorized");
-// //*const jwt = require("jsonwebtoken");
-// const config = require("../../config");
+const NotFoundError = require("../../errors/not-found");
+const UnauthorizedError = require("../../errors/unauthorized");
+const jwt = require("jsonwebtoken");
+const config = require("../../config");
 const usersService = require("./users.service");
 
 class UsersController {
@@ -56,23 +56,23 @@ class UsersController {
       next(err);
     }
   }
-//   async login(req, res, next) {
-//     try {
-//       const { email, password } = req.body;
-//       const userId = await usersService.checkPasswordUser(email, password);
-//       if (!userId) {
-//         throw new UnauthorizedError();
-//       }
-//       // const token = jwt.sign({ userId }, config.secretJwtToken, {
-//       //   expiresIn: "3d",
-//       // });
-//       // res.json({
-//       //   token,
-//       // });
-//     } catch (err) {
-//       next(err);
-//     }
-//   }
+  async login(req, res, next) {
+    try {
+      const { email, password } = req.body;
+      const userId = await usersService.checkPasswordUser(email, password);
+      if (!userId) {
+        throw new UnauthorizedError();
+      }
+      const token = jwt.sign({ userId }, config.secretJwtToken, 
+        { expiresIn: "3d",}
+        );
+      res.json({
+        token,
+      });
+    } catch (err) {
+      next(err);
+    }
+  }
   //l'utilisateur récupère ses informations par exemple il récupère les informations panier
   // async me(req, res, next){
   //   try{

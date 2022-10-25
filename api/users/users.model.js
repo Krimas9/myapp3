@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose");
 const { isEmail } = require("validator");
-// const bcrypt = require("bcrypt");
+const bcrypt = require("bcrypt");
 
 const userSchema = Schema({
   name: String,
@@ -26,8 +26,8 @@ userSchema.pre("save", async function () {
   this.email = this.email.toLowerCase();
 });
 
-// userSchema.pre("save", async function () {
-//   this.password = await bcrypt.hash(this.password, 10);
-// });
+userSchema.pre("save", async function () {
+  this.password = await bcrypt.hash(this.password, 10);
+});
 
 module.exports = model("User", userSchema);

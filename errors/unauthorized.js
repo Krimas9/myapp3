@@ -1,8 +1,8 @@
-// class UnauthorizedError extends Error {
-//   status = 401;
-//   constructor(message = "Unauthorized") {
-//     super(message);
-//   }
-// }
+class UnauthorizedError extends Error {
+  status = 401;
+  constructor(message = "Unauthorized") {
+    super(message);
+  }
+}
 
-// module.exports = UnauthorizedError;
+module.exports = UnauthorizedError;
