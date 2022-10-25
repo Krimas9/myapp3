@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doc</title>
+    <link rel="stylesheet" href="../index.css" />
+    <link
+      rel="stylesheet"
+      href="https://drive.google.com/file/d/1J_JxwxW52ldZLVlZ-35Tv2bNqLRsKWHP/view?usp=sharing"
+    />
+    <script src="/JS/catalogue.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+    <header id="header">
+      <img src="/img/logo.png" alt="" />
+      <div id="headerDiv">
+        <h1 id="headerTitre">Planète T-shirt</h1>
+        <ul class="menu">
+          <li id="acceuil"><a href="/index.html">Acceuil</a></li>
+          <li id="catalogue"><a href="/page/catalogue.html">Catalogue</a></li>
+          <li id="panier"><a href="/page/panier.html">Panier</a></li>
+          <li id="conexion"><a href="/page/connexion.html">Connexion</a></li>
+          <li id="boutique"><a href="/page/boutiques.html">boutiques</a></li>
+        </ul>
+      </div>
+    </header>
+    <main id="catalogue">
+      <div id="cataloqueDiv">
+        <h1>Catalogue</h1>
+        <div class="mainArticle" >            
+            <h2>Tshirt Blanc</h2>
+            <div class="article" >
+            <img class="articleImg" src="../img/tshirt_blanc.jpg" alt="" />
+            <button class="bouttonDetailArticle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-chevron-compact-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"
+                />
+              </svg>
+            </button>
+          </div>
+              <p class="pCatalogue">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+              et
+            </p>
+          
+        </div>
+        <div id="articleMain"  >                  
+                <h2>Tshirt Blanc</h2>
+                <img class="articleImg" src="../img/tshirt_blanc.jpg" alt="">
+                <div class="taille">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">S</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">M</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                        <label class="form-check-label" for="inlineRadio3">L</label>
+                    </div>
+                </div>
+                <p>tarif: 15 euros</p>
+                
+                    <button class="ajoutPanier">
+                      <a href="/page/panier.html">
+                        ajouter au panier
+                      </a>
+                  </button>
+                
+                <button class="retourCatalogue">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z"/>
+                  </svg>
+                </button>          
+        </div>
+    </main>
+    <footer id="footer">
+      <div id="divFooter">
+        <a href="https://planette-thirt/contact.com/">
+          <img src="/img/logo_contact.png" alt="contact" />
+        </a>
+        <ul id="ulFooter">
+          <li id="liInstagram">
+            <a href="https://instagram.com/"
+              ><img src="/img/logo_instagram.png" alt=""
+            /></a>
+          </li>
+          <li id="liFacebook">
+            <a href="https://facebook.com/"
+              ><img src="/img/logo_facebook.png" alt=""
+            /></a>
+          </li>
+          <li id="liTwitter">
+            <a href="https://twitter.com/"
+              ><img src="/img/logo_twitter.png" alt=""
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
