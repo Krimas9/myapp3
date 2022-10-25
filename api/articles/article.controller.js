@@ -16,7 +16,7 @@ class ArticleController {
       if (!article) {
         throw new NotFoundError();
       }
-      res.json(articles);
+      res.json(article);
     } catch (err) {
       next(err);
     }

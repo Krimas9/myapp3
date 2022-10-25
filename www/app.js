@@ -1,4 +1,4 @@
-const { app } = require("../server");
+const { server } = require("../server");
 const config = require("../config");
 const mongoose = require("mongoose");
 
@@ -15,6 +15,6 @@ db.on("open", () => {
   console.log("Database connected");
 });
 
-app.listen(config.port, () => {
+server.listen(config.port, () => {
   console.log("app running");
 });
